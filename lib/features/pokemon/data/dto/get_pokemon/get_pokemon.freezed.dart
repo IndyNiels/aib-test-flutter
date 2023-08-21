@@ -1,0 +1,154 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'get_pokemon.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+GetPokemonRequestDTO _$GetPokemonRequestDTOFromJson(Map<String, dynamic> json) {
+  return _GetPokemonRequestDTO.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GetPokemonRequestDTO {
+  String get url => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetPokemonRequestDTOCopyWith<GetPokemonRequestDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetPokemonRequestDTOCopyWith<$Res> {
+  factory $GetPokemonRequestDTOCopyWith(GetPokemonRequestDTO value,
+          $Res Function(GetPokemonRequestDTO) then) =
+      _$GetPokemonRequestDTOCopyWithImpl<$Res, GetPokemonRequestDTO>;
+  @useResult
+  $Res call({String url});
+}
+
+/// @nodoc
+class _$GetPokemonRequestDTOCopyWithImpl<$Res,
+        $Val extends GetPokemonRequestDTO>
+    implements $GetPokemonRequestDTOCopyWith<$Res> {
+  _$GetPokemonRequestDTOCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? url = null,
+  }) {
+    return _then(_value.copyWith(
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_GetPokemonRequestDTOCopyWith<$Res>
+    implements $GetPokemonRequestDTOCopyWith<$Res> {
+  factory _$$_GetPokemonRequestDTOCopyWith(_$_GetPokemonRequestDTO value,
+          $Res Function(_$_GetPokemonRequestDTO) then) =
+      __$$_GetPokemonRequestDTOCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String url});
+}
+
+/// @nodoc
+class __$$_GetPokemonRequestDTOCopyWithImpl<$Res>
+    extends _$GetPokemonRequestDTOCopyWithImpl<$Res, _$_GetPokemonRequestDTO>
+    implements _$$_GetPokemonRequestDTOCopyWith<$Res> {
+  __$$_GetPokemonRequestDTOCopyWithImpl(_$_GetPokemonRequestDTO _value,
+      $Res Function(_$_GetPokemonRequestDTO) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? url = null,
+  }) {
+    return _then(_$_GetPokemonRequestDTO(
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_GetPokemonRequestDTO implements _GetPokemonRequestDTO {
+  const _$_GetPokemonRequestDTO({required this.url});
+
+  factory _$_GetPokemonRequestDTO.fromJson(Map<String, dynamic> json) =>
+      _$$_GetPokemonRequestDTOFromJson(json);
+
+  @override
+  final String url;
+
+  @override
+  String toString() {
+    return 'GetPokemonRequestDTO(url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetPokemonRequestDTO &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, url);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetPokemonRequestDTOCopyWith<_$_GetPokemonRequestDTO> get copyWith =>
+      __$$_GetPokemonRequestDTOCopyWithImpl<_$_GetPokemonRequestDTO>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetPokemonRequestDTOToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GetPokemonRequestDTO implements GetPokemonRequestDTO {
+  const factory _GetPokemonRequestDTO({required final String url}) =
+      _$_GetPokemonRequestDTO;
+
+  factory _GetPokemonRequestDTO.fromJson(Map<String, dynamic> json) =
+      _$_GetPokemonRequestDTO.fromJson;
+
+  @override
+  String get url;
+  @override
+  @JsonKey(ignore: true)
+  _$$_GetPokemonRequestDTOCopyWith<_$_GetPokemonRequestDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}

@@ -1,0 +1,21 @@
+include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    public_member_api_docs: false
+    sort_pub_dependencies: false
+    sort_constructors_first: false
+    omit_local_variable_types: false
+    avoid_equals_and_hash_code_on_mutable_classes: false
+    cascade_invocations: false
+    prefer_single_quotes: true
+    always_use_package_imports: true
+    require_trailing_commas: true
+    use_build_context_synchronously: false
+    depend_on_referenced_packages: false
+    constant_identifier_names: false
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore
