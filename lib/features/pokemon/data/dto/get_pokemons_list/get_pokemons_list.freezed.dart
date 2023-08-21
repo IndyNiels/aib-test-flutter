@@ -183,7 +183,6 @@ GetPokemonsListResponseDTO _$GetPokemonsListResponseDTOFromJson(
 /// @nodoc
 mixin _$GetPokemonsListResponseDTO {
   List<Pokemon>? get results => throw _privateConstructorUsedError;
-  Page? get page => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -198,9 +197,7 @@ abstract class $GetPokemonsListResponseDTOCopyWith<$Res> {
       _$GetPokemonsListResponseDTOCopyWithImpl<$Res,
           GetPokemonsListResponseDTO>;
   @useResult
-  $Res call({List<Pokemon>? results, Page? page});
-
-  $PageCopyWith<$Res>? get page;
+  $Res call({List<Pokemon>? results});
 }
 
 /// @nodoc
@@ -218,30 +215,13 @@ class _$GetPokemonsListResponseDTOCopyWithImpl<$Res,
   @override
   $Res call({
     Object? results = freezed,
-    Object? page = freezed,
   }) {
     return _then(_value.copyWith(
       results: freezed == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as List<Pokemon>?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as Page?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PageCopyWith<$Res>? get page {
-    if (_value.page == null) {
-      return null;
-    }
-
-    return $PageCopyWith<$Res>(_value.page!, (value) {
-      return _then(_value.copyWith(page: value) as $Val);
-    });
   }
 }
 
@@ -254,10 +234,7 @@ abstract class _$$_GetPokemonsListResponseDTOCopyWith<$Res>
       __$$_GetPokemonsListResponseDTOCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Pokemon>? results, Page? page});
-
-  @override
-  $PageCopyWith<$Res>? get page;
+  $Res call({List<Pokemon>? results});
 }
 
 /// @nodoc
@@ -274,17 +251,12 @@ class __$$_GetPokemonsListResponseDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? results = freezed,
-    Object? page = freezed,
   }) {
     return _then(_$_GetPokemonsListResponseDTO(
       results: freezed == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
               as List<Pokemon>?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as Page?,
     ));
   }
 }
@@ -292,7 +264,7 @@ class __$$_GetPokemonsListResponseDTOCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GetPokemonsListResponseDTO implements _GetPokemonsListResponseDTO {
-  const _$_GetPokemonsListResponseDTO({final List<Pokemon>? results, this.page})
+  const _$_GetPokemonsListResponseDTO({final List<Pokemon>? results})
       : _results = results;
 
   factory _$_GetPokemonsListResponseDTO.fromJson(Map<String, dynamic> json) =>
@@ -309,11 +281,8 @@ class _$_GetPokemonsListResponseDTO implements _GetPokemonsListResponseDTO {
   }
 
   @override
-  final Page? page;
-
-  @override
   String toString() {
-    return 'GetPokemonsListResponseDTO(results: $results, page: $page)';
+    return 'GetPokemonsListResponseDTO(results: $results)';
   }
 
   @override
@@ -321,14 +290,13 @@ class _$_GetPokemonsListResponseDTO implements _GetPokemonsListResponseDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetPokemonsListResponseDTO &&
-            const DeepCollectionEquality().equals(other._results, _results) &&
-            (identical(other.page, page) || other.page == page));
+            const DeepCollectionEquality().equals(other._results, _results));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_results), page);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
 
   @JsonKey(ignore: true)
   @override
@@ -347,17 +315,14 @@ class _$_GetPokemonsListResponseDTO implements _GetPokemonsListResponseDTO {
 
 abstract class _GetPokemonsListResponseDTO
     implements GetPokemonsListResponseDTO {
-  const factory _GetPokemonsListResponseDTO(
-      {final List<Pokemon>? results,
-      final Page? page}) = _$_GetPokemonsListResponseDTO;
+  const factory _GetPokemonsListResponseDTO({final List<Pokemon>? results}) =
+      _$_GetPokemonsListResponseDTO;
 
   factory _GetPokemonsListResponseDTO.fromJson(Map<String, dynamic> json) =
       _$_GetPokemonsListResponseDTO.fromJson;
 
   @override
   List<Pokemon>? get results;
-  @override
-  Page? get page;
   @override
   @JsonKey(ignore: true)
   _$$_GetPokemonsListResponseDTOCopyWith<_$_GetPokemonsListResponseDTO>

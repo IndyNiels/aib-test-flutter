@@ -1,4 +1,3 @@
-import 'package:aib_test/features/pokemon/domain/model/page/page.dart';
 import 'package:aib_test/features/pokemon/domain/model/pokemon/pokemon.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -20,7 +19,6 @@ class GetPokemonsListRequestDTO with _$GetPokemonsListRequestDTO {
 class GetPokemonsListResponseDTO with _$GetPokemonsListResponseDTO {
   const factory GetPokemonsListResponseDTO({
     List<Pokemon>? results,
-    Page? page,
   }) = _GetPokemonsListResponseDTO;
 
   factory GetPokemonsListResponseDTO.fromJson(Map<String, dynamic> json) =>

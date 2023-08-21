@@ -26,14 +26,10 @@ _$_GetPokemonsListResponseDTO _$$_GetPokemonsListResponseDTOFromJson(
       results: (json['results'] as List<dynamic>?)
           ?.map((e) => Pokemon.fromJson(e as Map<String, dynamic>))
           .toList(),
-      page: json['page'] == null
-          ? null
-          : Page.fromJson(json['page'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_GetPokemonsListResponseDTOToJson(
         _$_GetPokemonsListResponseDTO instance) =>
     <String, dynamic>{
       'results': instance.results,
-      'page': instance.page,
     };
