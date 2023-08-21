@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:aib_test/core/utils/constants/app_contants.dart';
 import 'package:aib_test/core/utils/enums/status.dart';
-import 'package:aib_test/features/pokemon/data/dto/get_pokemon_list/get_pokemons_list.dart';
+import 'package:aib_test/features/pokemon/data/dto/get_pokemons_list/get_pokemons_list.dart';
 import 'package:aib_test/features/pokemon/domain/repository/pokemons_repository.dart';
 import 'package:aib_test/features/pokemon/presentation/pokemon_list/cubit/pokemon_list_state.dart';
 
