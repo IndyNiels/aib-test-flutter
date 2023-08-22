@@ -8,10 +8,15 @@ La API que deberás utilizar es la siguiente:
 https://pokeapi.co/docs/v2#info
 ```
 
+Diseño a implementar
+```
+https://www.figma.com/file/ZojzAWIWwHUoFxdtC2d2vb/MockUps?type=design&node-id=108-13373&mode=design&t=DAPUmiQLoHAI3Nac-0
+```
+
 ## Instrucciones
 
-1. Comienza por crear un Fork de este repositorio en tu cuenta de github.
-2. Un vez creas terminado el desarrollo, comparte este fork con el entrevistador.
+1. Comienza por descargar el proyecto.
+2. Un vez creas terminado el desarrollo, comparte un enlace al repositorio público.
 
 ## Estructura de la Aplicación
 
