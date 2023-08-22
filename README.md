@@ -1,43 +1,55 @@
-# Flutter AIB pokemon api test
+# All In Biking - Prueba técnica para Flutter con la API de Pokémon
 
-La prueba consiste en modificar el código que se da para incluir nuevas funcionalidades a una pequeña app en Flutter que ataque la API de pokeapi y publicarla como pública en un perfil de GitHub que se utilizará para valorar la prueba.
+Esta prueba tiene como objetivo ampliar el código proporcionado para agregar nuevas funcionalidades a una pequeña aplicación en Flutter. La aplicación utilizará la API de PokeAPI y se espera que el resultado final se publique en un repositorio público en GitHub, el cual será evaluado como parte de la prueba.
 
-La api a tilizar sera la siguiente:
+La API que deberás utilizar es la siguiente:
 
-    https://pokeapi.co/docs/v2#info
+```
+https://pokeapi.co/docs/v2#info
+```
 
-Lo primero que habrá que hacer es descargar el proyecto y hacer el commit inicial al repositorio de GitHub sin hacer ninguna modificación en el código. Una vez hecho esto se podrá empezar a desarrollar.
+## Instrucciones
 
-La cuenta con 2 pantallas.
+1. Comienza por crear un Fork de este repositorio en tu cuenta de github.
+2. Un vez creas terminado el desarrollo, comparte este fork con el entrevistador.
 
-Pantalla principal:
+## Estructura de la Aplicación
 
-- Listado de pokemons.
-- Páginado
-- Al hacer clic en el item del listado navegaremos a la pantalla de detalle.
+La aplicación consta de dos pantallas principales:
 
-Pantalla de detalle:
+### Pantalla Principal:
 
-- Información del pokemon seleccionado.
+- Listado de Pokémon.
+- Paginación.
+- Al hacer clic en un elemento del listado, se navegará a la pantalla de detalle.
 
+### Pantalla de Detalle:
 
-Para el desarrollo se tienen que incluir una serie de funcionalidades al código ya dado, como son:
+- Muestra información detallada del Pokémon seleccionado.
 
-- Que cada elemento de la lista muestre la información del pokemon
-- Mejora de la estructura de la pantalla de detalle
+## Funcionalidades Requeridas
 
-No hay restricciones a la hora de utilizar librerías de terceros.
+Para el desarrollo, es necesario agregar las siguientes funcionalidades al código proporcionado:
 
-Los aspectos que se valorarán en el desarrollo son:
+- Cada elemento de la lista debe mostrar la información del Pokémon correspondiente.
+- Realizar mejoras en la estructura y diseño de la pantalla de detalle.
 
-- Adaptación al state management de la app.
-- Mejoras en la estructura del código.
-- Que el código subido a Github tenga como mínimo 2 commits hechos durante el desarrollo.
+**No hay restricciones en cuanto al uso de librerías de terceros. La cantidad de información mostrada por cada pokemon en el listado y el detalle se deja a elección del participante**
 
-Además, puede agregar un fichero README con las observaciones que quiera hacernos llegar como puedan ser:
+## Criterios de Evaluación
 
-- ¿Qué haría de manera diferente si se le asignara más tiempo?
+El proceso de evaluación se centrará en los siguientes aspectos:
 
-Una vez terminado el proyecto solo hay que enviar el link del repositorio de GitHub.
+- Correcta implementación del state management de la aplicación.
+- Mejoras sustanciales en la estructura y organización del código.
+- Se valorará un buen uso de los commits, los cuales deben reflejar el progreso durante el desarrollo.
 
-¡Mucha suerte!
+## Observaciones Adicionales
+
+Además de las instrucciones anteriores, te invitamos a agregar un archivo README en el repositorio con las observaciones que consideres pertinentes. Por ejemplo:
+
+- ¿Qué enfoque seguirías si tuvieras más tiempo para completar la prueba?
+
+Una vez que hayas finalizado el proyecto, simplemente envía el enlace al repositorio de GitHub.
+
+¡Te deseamos mucha suerte y éxito en la prueba!
