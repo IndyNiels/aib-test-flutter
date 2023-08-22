@@ -29,7 +29,7 @@ class HomeContent extends StatelessWidget {
         title: Text(context.watch<HomeCubit>().state.appName),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: const ProductList(),
+      body: const PokemonList(),
     );
   }
 }

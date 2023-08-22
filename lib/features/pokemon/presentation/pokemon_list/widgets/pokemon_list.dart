@@ -8,8 +8,8 @@ import 'package:aib_test/features/pokemon/presentation/pokemon_list/cubit/pokemo
 import 'package:aib_test/features/pokemon/presentation/pokemon_list/widgets/bottom_loader.dart';
 import 'package:aib_test/features/pokemon/presentation/pokemon_list/widgets/pokemon_card.dart';
 
-class ProductList extends StatelessWidget {
-  const ProductList({
+class PokemonList extends StatelessWidget {
+  const PokemonList({
     super.key,
   });
 
@@ -19,21 +19,21 @@ class ProductList extends StatelessWidget {
       create: (context) =>
           PokemonListCubit(pokemonsRepository: locator<PokemonsRepository>())
             ..fetchPokemons(),
-      child: const ProductListContent(),
+      child: const PokemonListContent(),
     );
   }
 }
 
-class ProductListContent extends StatefulWidget {
-  const ProductListContent({
+class PokemonListContent extends StatefulWidget {
+  const PokemonListContent({
     super.key,
   });
 
   @override
-  State<ProductListContent> createState() => _ProductListContentState();
+  State<PokemonListContent> createState() => _PokemonListContentState();
 }
 
-class _ProductListContentState extends State<ProductListContent> {
+class _PokemonListContentState extends State<PokemonListContent> {
   final _scrollController = ScrollController();
 
   @override

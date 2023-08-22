@@ -1,5 +1,0 @@
-enum ProductType {
-  FIBERVODAFONE,
-  PHONELINE,
-  SWITCHBOARD,
-}

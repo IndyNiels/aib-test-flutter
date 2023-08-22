@@ -26,14 +26,14 @@ class PokemonDetails extends StatelessWidget {
         create: (context) => PokemonDetailsCubit(
           pokemonsRepository: locator<PokemonsRepository>(),
         )..getPokemon(pokemon?.url ?? ''),
-        child: const ProductDetailsContent(),
+        child: const PokemonDetailsContent(),
       ),
     );
   }
 }
 
-class ProductDetailsContent extends StatelessWidget {
-  const ProductDetailsContent({
+class PokemonDetailsContent extends StatelessWidget {
+  const PokemonDetailsContent({
     super.key,
   });
 
