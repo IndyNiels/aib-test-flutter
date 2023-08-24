@@ -25,6 +25,7 @@ class PokemonCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Nombre: ${pokemon?.name ?? "N/A"}'),
+              Text('Nombre: ${pokemon ?? "N/A"}'),
             ],
           ),
         ),

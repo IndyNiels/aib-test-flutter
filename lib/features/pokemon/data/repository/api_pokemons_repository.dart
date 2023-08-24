@@ -17,6 +17,7 @@ class ApiPokemonsRepository extends PokemonsRepository {
     GetPokemonsListRequestDTO request,
   ) async {
     try {
+
       final resp = await _httpServer.get(
         endpoint: Endpoints.baseUrl + Endpoints.pokemons,
         arguments: request.toJson(),
@@ -24,8 +25,22 @@ class ApiPokemonsRepository extends PokemonsRepository {
 
       GetPokemonsListResponseDTO response =
           GetPokemonsListResponseDTO.fromJson(resp.data);
+          //save response.results into a new variable
+          //loop through the results and make a new request for each pokemon
+          //save the response into a new variable
+          //return the new variable
+      List<Pokemon> pokemons = []; // Create an empty list
 
-      return Right(response.results ?? []);
+      for (var result in response.results ?? []) {
+        final pokemonResp = await _httpServer.get(endpoint: result.url);
+        final pokemon = Pokemon.fromJson(pokemonResp.data);
+        pokemons.add(pokemon); // Add each Pokemon to the list
+      }
+
+
+  
+
+      return Right(pokemons ?? []);
     } catch (_) {
       return const Left(null);
     }

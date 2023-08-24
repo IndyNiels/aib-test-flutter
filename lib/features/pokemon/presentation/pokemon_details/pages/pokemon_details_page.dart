@@ -51,6 +51,7 @@ class PokemonDetailsContent extends StatelessWidget {
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Text('ID: ${state.pokemon?.id ?? "N/A"}'),
+              Text('ID: ${state.pokemon  ?? "N/A"}'),
               Image.network(
                 state.pokemon?.sprites?.backDefault ?? '',
                 width: 150,

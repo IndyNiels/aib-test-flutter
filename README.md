@@ -58,3 +58,34 @@ Además de las instrucciones anteriores, te invitamos a agregar un archivo READM
 Una vez que hayas finalizado el proyecto, simplemente envía el enlace al repositorio de GitHub.
 
 ¡Te deseamos mucha suerte y éxito en la prueba!
+
+
+
+
+### My own comments 
+
+
+The pokemon object return two different results whether we are in the list page or in the details page. I want to know the reason for this, because we are actually calling the api from pokemon. 
+
+Posible answers: 
+Maybe the requests is different. -> We can change the request. 
+Maybe the serialization is different for both views. 
+
+Aren't we calling the same object? The variable is maybe different each time we make the request...
+
+
+Where does it specify when it fetches the list one by one? 
+
+
+
+Compare the fetch for list and the the fetch for details page. 
+
+
+The pokemon object is created for both of them.
+The object variable can be null so they are null. Something is happending in the request such that the other data is not present. (But names are somehow?)  WHere are the other instances of name? 
+
+
+### Posible solutions
+The api endpoint is different.. They are in fact different
+One is th the api endpoint. The other uses the url from the list...
+So observe the first api endpoint.
