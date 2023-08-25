@@ -89,3 +89,4 @@ The object variable can be null so they are null. Something is happending in the
 The api endpoint is different.. They are in fact different
 One is th the api endpoint. The other uses the url from the list...
 So observe the first api endpoint.
+

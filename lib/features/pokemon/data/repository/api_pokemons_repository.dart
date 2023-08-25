@@ -32,6 +32,7 @@ class ApiPokemonsRepository extends PokemonsRepository {
       List<Pokemon> pokemons = []; // Create an empty list
 
       for (var result in response.results ?? []) {
+        print(result);
         final pokemonResp = await _httpServer.get(endpoint: result.url);
         final pokemon = Pokemon.fromJson(pokemonResp.data);
         pokemons.add(pokemon); // Add each Pokemon to the list

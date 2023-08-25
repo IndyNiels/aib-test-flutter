@@ -24,8 +24,14 @@ class PokemonCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Image.network(
+                pokemon?.sprites?.backDefault ?? '',
+                height: 100,
+                width: 100,
+              ),
               Text('Nombre: ${pokemon?.name ?? "N/A"}'),
-              Text('Nombre: ${pokemon ?? "N/A"}'),
+              Text('ID: ${pokemon ?? "N/A"}'),
+     
             ],
           ),
         ),
