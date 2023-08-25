@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:aib_test/core/routing/app_router.dart';
 import 'package:aib_test/features/pokemon/domain/model/pokemon/pokemon.dart';
 import 'package:go_router/go_router.dart';
-import 'package:aib_test/core/utils/helpers.dart'; 
+import 'package:aib_test/core/utils/helpers.dart';
 
 class PokemonCard extends StatelessWidget {
   const PokemonCard({
@@ -22,22 +22,43 @@ class PokemonCard extends StatelessWidget {
         margin: const EdgeInsets.all(16),
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Column(
             children: [
-              Image.network(
-                pokemon?.sprites?.backDefault ?? '',
-                height: 70,
-                width: 70,
-              ),
-              Column(
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('${capitalizeFirstLetter(pokemon?.name ?? "N/A")}'),
-               
+                  Image.network(
+                    pokemon?.sprites?.backDefault ?? '',
+                    height: 70,
+                    width: 70,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+    
+                        children: [
+                          Text(
+                            capitalizeFirstLetter(pokemon?.name ?? 'N/A'),
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text('#00${pokemon?.id}'),
+                        )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text('#First'),
+                           Text('  #Second'),
+                        ],
+                      ),
+                    ],
+                  ),
+              
                 ],
               ),
-             
-     
             ],
           ),
         ),
