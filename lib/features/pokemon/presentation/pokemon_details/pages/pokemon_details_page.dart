@@ -75,36 +75,89 @@ class PokemonDetailsContent extends StatelessWidget {
                   ],
                 ),
               ),
-              Text(
+              const Text(
                 'Description',
                 style:
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 16), // Adding vertical spacing
-              Text(
+              const SizedBox(height: 16), // Adding vertical spacing
+              const Text(
                   ' Nulla eget ante nulla. Sed placerat auctor sagittis. Suspendisse semper, urna in blandit auctor, lorem lectus posuere massa, vitae laoreet orci nunc eget magna. Fusce nec venenatis urna. In varius eros eget odio pretium, eu tincidunt est dictum.',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
                     height: 1.57143,
                   )),
               Padding(
-              padding: EdgeInsets.only(top: 16.0), 
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
                 child: Row(
                   children: [
-                    pokemon_image(
+                    PokemonImage(
                       imageUrl: state.pokemon?.sprites?.backDefault ?? '',
                     ),
-                    pokemon_image(
+                    PokemonImage(
                       imageUrl: state.pokemon?.sprites?.backDefault ?? '',
                     ),
-                    pokemon_image(
+                    PokemonImage(
                       imageUrl: state.pokemon?.sprites?.backDefault ?? '',
                     ),
-                    pokemon_image(
+                    PokemonImage(
                       imageUrl: state.pokemon?.sprites?.backDefault ?? '',
                     )
                   ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Ability 1',
+                      style: AbilityTextStyle.myTextStyle,
+                    ),
+                    Text(
+                      'Ability 2',
+                      style: AbilityTextStyle.myTextStyle,
+                    ),
+                    Text(
+                      'Ability 3',
+                      style: AbilityTextStyle.myTextStyle,
+                    ),
+                    Text(
+                      'Ability 4',
+                      style: AbilityTextStyle.myTextStyle,
+                    )
+                  ],
+                ),
+              ),
+              const Text(
+                  ' Nulla eget ante nulla. Sed placerat auctor sagittis. Suspendisse semper, urna in blandit auctor, lorem lectus posuere massa, vitae laoreet orci nunc eget magna. Fusce nec venenatis urna. In varius eros eget odio pretium, eu tincidunt est dictum.',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    height: 1.57143,
+                  )
+                  ),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextButton(
+                        onPressed: () {},
+                         style: CustomButtonStyle.myButtonStyle,
+                        child: Text('Previous'),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                          style: CustomButtonStyle.myButtonStyle,
+                        child: Text('Next'),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
@@ -116,12 +169,12 @@ class PokemonDetailsContent extends StatelessWidget {
   }
 }
 
-class pokemon_image extends StatelessWidget {
+class PokemonImage extends StatelessWidget {
   final String imageUrl;
   final double width;
   final double height;
 
-  pokemon_image({
+  PokemonImage({
     required this.imageUrl,
     this.width = 83,
     this.height = 54,
@@ -135,4 +188,29 @@ class pokemon_image extends StatelessWidget {
       height: height,
     );
   }
+}
+
+class AbilityTextStyle {
+  static const TextStyle myTextStyle = TextStyle(
+    color: Color(0xFF7E7E7E),
+    fontFamily: 'Roboto',
+    fontSize: 13,
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w400,
+    height: 1.53846,
+    letterSpacing: -0.08,
+  );
+}
+
+
+
+class CustomButtonStyle {
+  static ButtonStyle myButtonStyle = TextButton.styleFrom(
+    textStyle: TextStyle(fontSize: 16),
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+    backgroundColor: Color(0xFFEAF0FC),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(7),
+    ),
+  );
 }
