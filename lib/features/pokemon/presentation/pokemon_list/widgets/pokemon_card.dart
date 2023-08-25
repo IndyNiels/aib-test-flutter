@@ -28,7 +28,7 @@ class PokemonCard extends StatelessWidget {
                 children: [
                   _buildPokemonImage(),
                   _buildPokemonDetails(),
-                  Expanded(
+                  const Expanded(
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Column(
