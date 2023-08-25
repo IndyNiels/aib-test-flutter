@@ -25,23 +25,19 @@ class ApiPokemonsRepository extends PokemonsRepository {
 
       GetPokemonsListResponseDTO response =
           GetPokemonsListResponseDTO.fromJson(resp.data);
-          //save response.results into a new variable
-          //loop through the results and make a new request for each pokemon
-          //save the response into a new variable
-          //return the new variable
-      List<Pokemon> pokemons = []; // Create an empty list
+        
+      List<Pokemon> pokemons = []; // Creamos una lista vacía
 
       for (var result in response.results ?? []) {
         print(result);
         final pokemonResp = await _httpServer.get(endpoint: result.url);
         final pokemon = Pokemon.fromJson(pokemonResp.data);
-        pokemons.add(pokemon); // Add each Pokemon to the list
+        pokemons.add(pokemon); // Añadir cada Pokemon a la lista
       }
 
 
-  
 
-      return Right(pokemons ?? []);
+      return Right(response.results ?? []);
     } catch (_) {
       return const Left(null);
     }

@@ -97,3 +97,10 @@ So observe the first api endpoint.
 
 
 No me he atrevido a cambiar el Sprite de back_default a front_default value porque sospecho que requiere de hacer un rebuild del package freezed. - Modificando los archivos generados por freezed se puede cambiar al valor front_default pero pone en los comentarios que no hay que tocar ese codigo a mano por que son autogenerados por el build. 
+
+
+## Ahora que la api ha cambiado ya no tengo la url. Pero la sigo necesitando para acceder a los datos en la pagina de detalle. Como lo hago? 
+
+1. Introducir la url en el objecto Pokemon para no cambiar nada del codigo. 
+2. Pasar el mismo objecto a la pantalla de detalle --- Probablemente requiera de trastear con el state. 
+3. I don't need to make a second request. That's the thing

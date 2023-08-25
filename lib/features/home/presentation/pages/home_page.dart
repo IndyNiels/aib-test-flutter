@@ -26,7 +26,8 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.watch<HomeCubit>().state.appName),
+        title: Text('Pokemon List'),
+        centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: const PokemonList(),
