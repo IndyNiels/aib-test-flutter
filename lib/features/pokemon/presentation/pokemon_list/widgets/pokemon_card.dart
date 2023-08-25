@@ -26,7 +26,10 @@ class PokemonCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  _buildPokemonImage(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: _buildPokemonImage(),
+                  ),
                   _buildPokemonDetails(),
                   const Expanded(
                     child: Align(
@@ -60,13 +63,15 @@ Widget _buildPokemonImage() {
       width: 70,
     );
   } else {
-    return Text(
-      'N/A',
-      style: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+    return 
+    // Text(
+    //   'N/A',
+    //   style: TextStyle(
+    //     fontSize: 16,
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    // );
+    GrayBox();
   }
 }
 
@@ -98,6 +103,18 @@ Widget _buildPokemonImage() {
           child: Text('#00${pokemon?.id ?? 'N/A'}'),
         ),
       ],
+    );
+  }
+}
+
+
+class GrayBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 40,
+      height: 40,
+      color: Colors.amber,
     );
   }
 }

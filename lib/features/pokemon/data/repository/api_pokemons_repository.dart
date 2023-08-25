@@ -37,7 +37,7 @@ class ApiPokemonsRepository extends PokemonsRepository {
 
 
 
-      return Right(response.results ?? []);
+      return Right(pokemons ?? []);
     } catch (_) {
       return const Left(null);
     }
