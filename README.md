@@ -65,6 +65,9 @@ Una vez que hayas finalizado el proyecto, simplemente envía el enlace al reposi
 ### My own comments 
 
 
+- 
+
+
 The pokemon object return two different results whether we are in the list page or in the details page. I want to know the reason for this, because we are actually calling the api from pokemon. 
 
 Posible answers: 
@@ -85,6 +88,8 @@ The pokemon object is created for both of them.
 The object variable can be null so they are null. Something is happending in the request such that the other data is not present. (But names are somehow?)  WHere are the other instances of name? 
 
 
+
+
 ### Posible solutions
 The api endpoint is different.. They are in fact different
 One is th the api endpoint. The other uses the url from the list...
@@ -93,14 +98,17 @@ So observe the first api endpoint.
 
 
 
-## front_default 
-
-
-No me he atrevido a cambiar el Sprite de back_default a front_default value porque sospecho que requiere de hacer un rebuild del package freezed. - Modificando los archivos generados por freezed se puede cambiar al valor front_default pero pone en los comentarios que no hay que tocar ese codigo a mano por que son autogenerados por el build. 
-
-
 ## Ahora que la api ha cambiado ya no tengo la url. Pero la sigo necesitando para acceder a los datos en la pagina de detalle. Como lo hago? 
 
 1. Introducir la url en el objecto Pokemon para no cambiar nada del codigo. 
 2. Pasar el mismo objecto a la pantalla de detalle --- Probablemente requiera de trastear con el state. 
 3. I don't need to make a second request. That's the thing
+
+
+
+## Cambios realizados
+
+
+1. Añadido clases para estilos bajo la carpeta styles contenida en lib, para separar los estilos. 
+2. Creado un wrapper alrededor del listView en la pagina de detalle para renderizar los botones en la parte inferior de la pantalla. 
+3. Cambiado la json_key the back_default a front_default para peticionar la imagen de frente del pokemon segun la pokeapi. 

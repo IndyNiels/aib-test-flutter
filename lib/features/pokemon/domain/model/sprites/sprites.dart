@@ -5,7 +5,7 @@ part 'sprites.g.dart';
 @freezed
 class Sprites with _$Sprites {
   const factory Sprites({
-    @JsonKey(name: 'back_default') String? backDefault,
+    @JsonKey(name: 'front_default') String? backDefault,
   }) = _Sprites;
 
   factory Sprites.fromJson(Map<String, dynamic> json) =>

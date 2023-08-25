@@ -20,7 +20,7 @@ Sprites _$SpritesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Sprites {
-  @JsonKey(name: 'back_default')
+  @JsonKey(name: 'front_default')
   String? get backDefault => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -33,7 +33,7 @@ abstract class $SpritesCopyWith<$Res> {
   factory $SpritesCopyWith(Sprites value, $Res Function(Sprites) then) =
       _$SpritesCopyWithImpl<$Res, Sprites>;
   @useResult
-  $Res call({@JsonKey(name: 'back_default') String? backDefault});
+  $Res call({@JsonKey(name: 'front_default') String? backDefault});
 }
 
 /// @nodoc
@@ -67,7 +67,7 @@ abstract class _$$_SpritesCopyWith<$Res> implements $SpritesCopyWith<$Res> {
       __$$_SpritesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'back_default') String? backDefault});
+  $Res call({@JsonKey(name: 'front_default') String? backDefault});
 }
 
 /// @nodoc
@@ -94,13 +94,13 @@ class __$$_SpritesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Sprites implements _Sprites {
-  const _$_Sprites({@JsonKey(name: 'back_default') this.backDefault});
+  const _$_Sprites({@JsonKey(name: 'front_default') this.backDefault});
 
   factory _$_Sprites.fromJson(Map<String, dynamic> json) =>
       _$$_SpritesFromJson(json);
 
   @override
-  @JsonKey(name: 'back_default')
+  @JsonKey(name: 'front_default')
   final String? backDefault;
 
   @override
@@ -137,12 +137,12 @@ class _$_Sprites implements _Sprites {
 
 abstract class _Sprites implements Sprites {
   const factory _Sprites(
-      {@JsonKey(name: 'back_default') final String? backDefault}) = _$_Sprites;
+      {@JsonKey(name: 'front_default') final String? backDefault}) = _$_Sprites;
 
   factory _Sprites.fromJson(Map<String, dynamic> json) = _$_Sprites.fromJson;
 
   @override
-  @JsonKey(name: 'back_default')
+  @JsonKey(name: 'front_default')
   String? get backDefault;
   @override
   @JsonKey(ignore: true)

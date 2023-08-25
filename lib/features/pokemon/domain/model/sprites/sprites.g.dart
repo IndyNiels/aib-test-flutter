@@ -7,10 +7,10 @@ part of 'sprites.dart';
 // **************************************************************************
 
 _$_Sprites _$$_SpritesFromJson(Map<String, dynamic> json) => _$_Sprites(
-      backDefault: json['back_default'] as String?,
+      backDefault: json['front_default'] as String?,
     );
 
 Map<String, dynamic> _$$_SpritesToJson(_$_Sprites instance) =>
     <String, dynamic>{
-      'back_default': instance.backDefault,
+      'front_default': instance.backDefault,
     };
