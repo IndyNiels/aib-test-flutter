@@ -90,3 +90,10 @@ The api endpoint is different.. They are in fact different
 One is th the api endpoint. The other uses the url from the list...
 So observe the first api endpoint.
 
+
+
+
+## front_default 
+
+
+No me he atrevido a cambiar el Sprite de back_default a front_default value porque sospecho que requiere de hacer un rebuild del package freezed. - Modificando los archivos generados por freezed se puede cambiar al valor front_default pero pone en los comentarios que no hay que tocar ese codigo a mano por que son autogenerados por el build. 
