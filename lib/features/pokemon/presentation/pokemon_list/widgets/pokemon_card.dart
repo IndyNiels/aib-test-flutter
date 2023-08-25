@@ -50,13 +50,25 @@ class PokemonCard extends StatelessWidget {
     );
   }
 
-  Widget _buildPokemonImage() {
+Widget _buildPokemonImage() {
+  final imageUrl = pokemon?.sprites?.backDefault;
+  
+  if (imageUrl != null && imageUrl.isNotEmpty) {
     return Image.network(
-      pokemon?.sprites?.backDefault ?? '',
+      imageUrl,
       height: 70,
       width: 70,
     );
+  } else {
+    return Text(
+      'N/A',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    );
   }
+}
 
   Widget _buildPokemonDetails() {
     return Column(
@@ -83,7 +95,7 @@ class PokemonCard extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(4.0),
-          child: Text('#00${pokemon?.id}'),
+          child: Text('#00${pokemon?.id ?? 'N/A'}'),
         ),
       ],
     );
