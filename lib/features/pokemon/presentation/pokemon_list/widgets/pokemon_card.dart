@@ -6,9 +6,9 @@ import 'package:aib_test/core/utils/helpers.dart';
 
 class PokemonCard extends StatelessWidget {
   const PokemonCard({
-    super.key,
+    Key? key,
     this.pokemon,
-  });
+  }) : super(key: key);
 
   final Pokemon? pokemon;
 
@@ -25,44 +25,67 @@ class PokemonCard extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    pokemon?.sprites?.backDefault ?? '',
-                    height: 70,
-                    width: 70,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-    
+                  _buildPokemonImage(),
+                  _buildPokemonDetails(),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Column(
                         children: [
-                          Text(
-                            capitalizeFirstLetter(pokemon?.name ?? 'N/A'),
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: Text('#00${pokemon?.id}'),
-                        )
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black, // Change the color as needed
+                          )
                         ],
                       ),
-                      Row(
-                        children: [
-                          Text('#First'),
-                           Text('  #Second'),
-                        ],
-                      ),
-                    ],
+                    ),
                   ),
-              
                 ],
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildPokemonImage() {
+    return Image.network(
+      pokemon?.sprites?.backDefault ?? '',
+      height: 70,
+      width: 70,
+    );
+  }
+
+  Widget _buildPokemonDetails() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildNameAndId(),
+        Row(
+          children: [
+            Text('#type_1'),
+            SizedBox(width: 10.0), // Add spacing between type labels
+            Text('#type_2'),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildNameAndId() {
+    return Row(
+      children: [
+        Text(
+          capitalizeFirstLetter(pokemon?.name ?? 'N/A'),
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Text('#00${pokemon?.id}'),
+        ),
+      ],
     );
   }
 }
