@@ -121,13 +121,13 @@ So observe the first api endpoint.
 2. Observar mejor las request a la API para implementar de forma cogerente las peticiones tanto en la Pagina de lista como en la Pagina de detalle.   
 
 Se puede cambiar el response.results por pokemons con una introducción que he realizado para observar correctamente la Pagina de Lista cambiando 
-````
+````dart
   return Right(response.results ?? []);
 ```
 
 por 
 
-```
+```dart
   return Right(pokemons ?? []);
 ```
 
