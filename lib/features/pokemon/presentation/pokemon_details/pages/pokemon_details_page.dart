@@ -88,13 +88,51 @@ class PokemonDetailsContent extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     height: 1.57143,
                   )),
-              Spacer(),
-              // Text('ID: ${state.pokemon  ?? "N/A"}'),
+              Padding(
+              padding: EdgeInsets.only(top: 16.0), 
+                child: Row(
+                  children: [
+                    pokemon_image(
+                      imageUrl: state.pokemon?.sprites?.backDefault ?? '',
+                    ),
+                    pokemon_image(
+                      imageUrl: state.pokemon?.sprites?.backDefault ?? '',
+                    ),
+                    pokemon_image(
+                      imageUrl: state.pokemon?.sprites?.backDefault ?? '',
+                    ),
+                    pokemon_image(
+                      imageUrl: state.pokemon?.sprites?.backDefault ?? '',
+                    )
+                  ],
+                ),
+              )
             ],
           );
         }
         return const Center(child: CircularProgressIndicator());
       },
+    );
+  }
+}
+
+class pokemon_image extends StatelessWidget {
+  final String imageUrl;
+  final double width;
+  final double height;
+
+  pokemon_image({
+    required this.imageUrl,
+    this.width = 83,
+    this.height = 54,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.network(
+      imageUrl,
+      width: width,
+      height: height,
     );
   }
 }
